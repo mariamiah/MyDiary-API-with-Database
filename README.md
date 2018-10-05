@@ -1,4 +1,7 @@
 # MyDiary-API-With-Database
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/405184ef2bd34b7690693ba3d88bc433)](https://app.codacy.com/app/mariamiah/MyDiary-API-with-Database?utm_source=github.com&utm_medium=referral&utm_content=mariamiah/MyDiary-API-with-Database&utm_campaign=Badge_Grade_Dashboard)
+
 MyDiary is an online journal where users can pen down their thoughts and feelings.
 
 ## Features 
