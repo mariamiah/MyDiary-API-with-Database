@@ -1,0 +1,33 @@
+Endpoint returning a list of all entries
+---
+tags:
+  - Entry
+definitions:
+  Entry:
+    type: object
+    properties:
+      entry_id:
+        type: integer
+        format: int64
+      entry_text:
+        type: string
+      date_created:
+          type: string
+          format: date-time
+      
+responses:
+  200:
+    description: A list of all created entries
+    schema:
+      $ref: '#/definitions/Entry'
+    examples:
+      Entries: [{
+    "entry_id": 1, 
+    "entry_text": "my second entry", 
+    "date_created": "Wed, 03 Oct 2018 09:00:17 GMT"
+  }, 
+  {
+    "entry_id": 2, 
+    "entry_text": "My second entry", 
+    "date_created": "Wed, 04 Oct 2018 09:00:17 GMT"
+  }]  

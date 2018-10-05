@@ -1,0 +1,35 @@
+Endpoint for deleting a diary
+---
+  tags:
+    - Diary
+  parameters:
+    - name: diary_id
+      in: path
+      description: Id of diary to delete
+      required: true
+      type: integer
+      format: int64
+  definitions:
+    Diary:
+      type: object
+      properties:
+        diary_id:
+          type: integer
+          format: int64
+        diary_name:
+          type: string
+        date_created:
+          type: string
+          format: date-time
+
+  responses:
+    200:
+      description: diary Successfully deleted 
+      schema:
+        $ref: '#/definitions/Diary'
+      examples:
+        [{
+          "message": "Diary deleted successfully"
+        }]
+    400:
+      description: Index out of range

@@ -1,0 +1,55 @@
+Endpoint for registering a User
+---
+  tags:
+    - User
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - name: body
+      in: body
+      description: User Details
+      required: true
+      schema :
+        $ref: '#/definitions/createUser'
+  definitions:
+    User:
+      type: object
+      properties:
+        user_id:
+          type: integer
+          format: int64
+        user_name:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+    createUser:
+      type: object
+      properties:
+        user_name:
+          type: string
+          example: "maria"
+        email:
+          type: string
+          example: "maria@gmail.com"
+        password:
+          type: string
+          example: "123353"
+  responses:
+    201:
+      description: Registration successful
+      schema:
+        $ref: '#/definitions/User'
+      examples:
+        [{
+          "message":"User added successfully"
+        }]
+    400:
+      description: username cannot be blank
+      description: Password cannot be blank
+      description: Email cannot be blank
+      description: No user added
+      description: Invalid email format

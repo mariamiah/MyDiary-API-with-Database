@@ -1,0 +1,38 @@
+Endpoint to fetch a single diary
+---
+  tags:
+    - Diary
+  parameters:
+    - name: diary_id
+      in: path
+      description: "id of the diary to return"
+      required: true
+      type: integer
+      format: int64
+  definitions:
+    Diary:
+      type: object
+      properties:
+        diary_id:
+          type: integer
+          format: int64
+        diary_name:
+          type: string
+        date_created:
+          type: string
+          format: date-time
+        
+  responses:
+    200:
+      description: Information about specific Diary
+      schema:
+        $ref: '#/definitions/Diary'
+      examples:
+        Diary: [{
+        "diary_id": 1, 
+        "diary_name": "peaches",
+        "Date Created": "Sun, 3 Oct 2018 10:43:31 GMT"
+      }]
+    400:
+      description: Index out of range
+
