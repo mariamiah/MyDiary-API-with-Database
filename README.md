@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/mariamiah/MyDiary-API-with-Database.svg?branch=develop)](https://travis-ci.org/mariamiah/MyDiary-API-with-Database)
 # MyDiary-API-With-Database
 MyDiary is an online journal where users can pen down their thoughts and feelings.
 
