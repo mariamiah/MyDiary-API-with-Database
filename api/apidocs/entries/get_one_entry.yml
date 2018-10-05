@@ -1,0 +1,38 @@
+Endpoint to fetch a single entry
+---
+  tags:
+    - Entry
+  parameters:
+    - name: entry_id
+      in: path
+      description: "id of the entry to return"
+      required: true
+      type: integer
+      format: int64
+  definitions:
+    Entry:
+      type: object
+      properties:
+        entry_id:
+          type: integer
+          format: int64
+        entry_text:
+          type: string
+        date_created:
+          type: string
+          format: date-time
+        
+  responses:
+    200:
+      description: Information about specific Entry
+      schema:
+        $ref: '#/definitions/Entry'
+      examples:
+        Entry: [{
+        "entry_id": 1, 
+        "entry_text": "peaches",
+        "Date Created": "Sun, 3 Oct 2018 10:43:31 GMT"
+      }]
+    400:
+      description: Index out of range
+

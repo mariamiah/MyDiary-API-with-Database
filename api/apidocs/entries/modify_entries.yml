@@ -1,0 +1,35 @@
+Endpoint for modifying an entry
+---
+  tags:
+    - Entry
+  parameters:
+    - name: entry_id
+      in: path
+      description: Id for entry to modify
+      required: true
+      type: integer
+      format: int64
+  definitions:
+    Entry:
+      type: object
+      properties:
+        entry_id:
+          type: integer
+          format: int64
+        entry_text:
+          type: string
+        date_created:
+          type: string
+          format: date-time
+
+  responses:
+    200:
+      description: Entry Successfully modified 
+      schema:
+        $ref: '#/definitions/Entry'
+      examples:
+        [{
+          "message": "Entry modified successfully"
+        }]
+    400:
+      description: Index out of range

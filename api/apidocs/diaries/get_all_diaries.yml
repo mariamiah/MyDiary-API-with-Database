@@ -1,0 +1,33 @@
+Endpoint returning a list of all diaries
+---
+tags:
+  - Diary
+definitions:
+  Diary:
+    type: object
+    properties:
+      diary_id:
+        type: integer
+        format: int64
+      diary_name:
+        type: string
+      date_created:
+          type: string
+          format: date-time
+      
+responses:
+  200:
+    description: A list of all created diaries
+    schema:
+      $ref: '#/definitions/Diary'
+    examples:
+      Diaries: [{
+    "diary_id": 1, 
+    "diary_name": "my diary", 
+    "date_created": "Wed, 03 Oct 2018 09:00:17 GMT"
+  }, 
+  {
+    "diary_id": 2, 
+    "diary_name": "The second diary", 
+    "date_created": "Wed, 04 Oct 2018 09:00:17 GMT"
+  }]  

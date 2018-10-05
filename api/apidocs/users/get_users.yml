@@ -1,0 +1,36 @@
+Endpoint returning a list of all users
+---
+tags:
+  - User
+definitions:
+  User:
+    type: object
+    properties:
+      user_id:
+        type: integer
+        format: int64
+      user_name:
+        type: string
+      email:
+        type: string
+      password:
+        type: string
+      
+responses:
+  200:
+    description: A list of all registered users
+    schema:
+      $ref: '#/definitions/User'
+    examples:
+      Users: [{
+    "user_id": 1, 
+    "user_name": "maria", 
+    "email": "maria@gmail.com",
+    "password": "12345"
+  }, 
+  {
+    "user_id": 2, 
+    "user_name": "Martha", 
+    "email": "martha@gmail.com",
+    "password": "3434"
+  }]  

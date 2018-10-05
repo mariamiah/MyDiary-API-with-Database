@@ -1,0 +1,45 @@
+Endpoint for creating a new Entry
+---
+  tags:
+    - Entry
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - name: body
+      in: body
+      description: Entry Details
+      required: true
+      schema :
+        $ref: '#/definitions/createEntry'
+  definitions:
+    Entry:
+      type: object
+      properties:
+        entry_id:
+          type: integer
+          format: int64
+        entry_text:
+          type: string
+        date_created:
+          type: string
+          format: date-time
+    createEntry:
+      type: object
+      properties:
+        entry_text:
+          type: string
+          example: "my first entry"
+
+  responses:
+    201:
+      description: Entry added successfully
+      schema:
+        $ref: '#/definitions/Entry'
+      examples:
+        [{
+          "message":"Entry added successfully"
+        }]
+    400:
+      description: Entry text missing
