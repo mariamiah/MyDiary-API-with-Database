@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/mariamiah/MyDiary-API-with-Database.svg?branch=develop)](https://travis-ci.org/mariamiah/MyDiary-API-with-Database)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/8769914c94dcd4499614/test_coverage)](https://codeclimate.com/github/mariamiah/MyDiary-API-with-Database/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/8769914c94dcd4499614/maintainability)](https://codeclimate.com/github/mariamiah/MyDiary-API-with-Database/maintainability)
 # MyDiary-API-With-Database
 MyDiary is an online journal where users can pen down their thoughts and feelings.
 
